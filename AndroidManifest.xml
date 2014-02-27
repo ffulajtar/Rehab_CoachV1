@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rehab_coachv1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.rehab_coachv1.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.ReminderActivity"
+            android:label="@string/title_activity_reminder" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.DuringActivity"
+            android:label="@string/title_activity_during" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.ReviewActivity"
+            android:label="@string/title_activity_review" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.EndActivity"
+            android:label="@string/title_activity_end" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.ProfileActivity"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.TransportationActivity"
+            android:label="@string/title_activity_transportation" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.LostActivity"
+            android:label="@string/title_activity_lost" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.EmergencyContactActivity"
+            android:label="@string/title_activity_emergency_contact" >
+        </activity>
+    </application>
+
+</manifest>
