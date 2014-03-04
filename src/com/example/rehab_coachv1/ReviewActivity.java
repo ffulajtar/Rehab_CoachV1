@@ -1,5 +1,6 @@
  package com.example.rehab_coachv1;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import android.content.Intent;
@@ -58,7 +59,12 @@ public class ReviewActivity extends FragmentActivity {
 			setTheme(android.R.style.Theme_Holo);
 		}
 		setContentView(R.layout.activity_review);
-		String[] review_list = new String[] {"How comfortable were you during this activity?", "How social were you?", "How successful was this activity?", "How easily did you find transportation?", "How likely are you to do this activity again?"};   
+		ArrayList <String> review_list = new ArrayList<String>(); 
+		review_list.add("How comfortable were you during this activity?");
+		review_list.add("How social were you?");
+		review_list.add("How successful was this activity?");
+		review_list.add("How easily did you find transportation?");
+		review_list.add("How likely are you to do this activity again?");
 		activity_name = getIntent().getStringExtra("act");
 		TextView name = (TextView) findViewById(R.id.title);
 		name.setText(activity_name);
@@ -125,9 +131,9 @@ public class ReviewActivity extends FragmentActivity {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		String[] review_list = new String[5];
+		ArrayList<String> review_list = new ArrayList<String>();
 		
-		public SectionsPagerAdapter(FragmentManager fm, String[] review) {
+		public SectionsPagerAdapter(FragmentManager fm, ArrayList<String> review) {
 			super(fm);
 			review_list = review;
 		}
@@ -141,7 +147,7 @@ public class ReviewActivity extends FragmentActivity {
 			{
 				Fragment fragment = new DummySectionFragment();
 				Bundle args = new Bundle();
-				args.putString(DummySectionFragment.ARG_SECTION_NUMBER, review_list[position]);
+				args.putString(DummySectionFragment.ARG_SECTION_NUMBER, review_list.get(position));
 				args.putInt("current_page", position);
 				fragment.setArguments(args);
 				return fragment;
@@ -150,7 +156,7 @@ public class ReviewActivity extends FragmentActivity {
 			{
 				Fragment fragment = new LastFragment();
 				Bundle args = new Bundle();
-				args.putString(LastFragment.ARG_SECTION_NUMBER, review_list[position]);
+				args.putString(LastFragment.ARG_SECTION_NUMBER, review_list.get(position));
 				fragment.setArguments(args);
 				return fragment;
 			}

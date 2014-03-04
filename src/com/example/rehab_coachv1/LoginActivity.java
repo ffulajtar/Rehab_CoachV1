@@ -38,7 +38,7 @@ public class LoginActivity extends Activity {
 	
 	public void loginToApp(View view)
 	{
-			Intent home = new Intent(this, EndActivity.class);
+			Intent home = new Intent(this, HomeActivity.class);
 			home.putExtra("theme", theme);
 			startActivity(home);
 	}

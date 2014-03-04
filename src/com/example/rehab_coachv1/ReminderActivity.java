@@ -1,5 +1,6 @@
 package com.example.rehab_coachv1;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,7 +51,7 @@ public class ReminderActivity extends FragmentActivity {
 			setTheme(android.R.style.Theme_Holo);
 		}
 		setContentView(R.layout.activity_reminder);
-		String[] remind_list = new String[] {"Check Bus Schedule", "Check Weather Conditions", "Bring Catheter", "Use bathroom", "Walk Dog"};   
+		ArrayList<String> remind_list = new ArrayList<String> ();   
 		activity_name = getIntent().getStringExtra("act");
 		TextView name = (TextView) findViewById(R.id.title);
 		name.setText(activity_name);
@@ -117,9 +118,9 @@ public class ReminderActivity extends FragmentActivity {
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-		String[] reminders = new String[5];
+		ArrayList<String> reminders = new ArrayList<String>();
 		
-		public SectionsPagerAdapter(FragmentManager fm, String[] remind) {
+		public SectionsPagerAdapter(FragmentManager fm,  ArrayList<String> remind) {
 			super(fm);
 			reminders = remind;
 		}
@@ -133,7 +134,7 @@ public class ReminderActivity extends FragmentActivity {
 			{
 				Fragment fragment = new DummySectionFragment();
 				Bundle args = new Bundle();
-				args.putString(DummySectionFragment.ARG_SECTION_NUMBER, reminders[position]);
+				args.putString(DummySectionFragment.ARG_SECTION_NUMBER, reminders.get(position));
 				args.putInt("current_page", position);
 				fragment.setArguments(args);
 				return fragment;
@@ -142,7 +143,7 @@ public class ReminderActivity extends FragmentActivity {
 			{
 				Fragment fragment = new LastFragment();
 				Bundle args = new Bundle();
-				args.putString(LastFragment.ARG_SECTION_NUMBER, reminders[position]);
+				args.putString(LastFragment.ARG_SECTION_NUMBER, reminders.get(position));
 				fragment.setArguments(args);
 				return fragment;
 			}
