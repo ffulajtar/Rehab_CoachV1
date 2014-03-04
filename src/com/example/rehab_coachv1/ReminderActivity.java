@@ -3,12 +3,15 @@ package com.example.rehab_coachv1;
 import java.util.ArrayList;
 import java.util.Locale;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,10 +41,30 @@ public class ReminderActivity extends FragmentActivity {
 	String activity_name;
 	int theme = 0;
 	
+	private SQLiteDatabase database;
+	ArrayList<String> remind_list = new ArrayList<String>();
+	
+	private void getReminders(int activity_id){
+		ExternalDbOpenHelper dbHelper = new ExternalDbOpenHelper(this, "rehab_coach");
+		database = dbHelper.openDataBase();
+		
+		Log.d("MIKE", "act id = " + activity_id);
+		
+		Cursor prereqCursor = database.rawQuery("select name from prerequisite where activity_id = ?", new String[]{Integer.toString(activity_id)});
+		prereqCursor.moveToFirst();
+		
+		while(!prereqCursor.isAfterLast()){
+			remind_list.add(prereqCursor.getString(prereqCursor.getColumnIndex("name")));
+			prereqCursor.moveToNext();
+		}
+		Log.d("MIKE", "reminder_size = " + remind_list.size());
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		theme = getIntent().getIntExtra("theme", 0);
+		int activity_id = getIntent().getIntExtra("act_id",0);
 		if (theme == 0)
 		{
 			setTheme(android.R.style.Theme_Holo_Light);
@@ -51,7 +74,9 @@ public class ReminderActivity extends FragmentActivity {
 			setTheme(android.R.style.Theme_Holo);
 		}
 		setContentView(R.layout.activity_reminder);
-		ArrayList<String> remind_list = new ArrayList<String> ();   
+				
+		getReminders(activity_id);
+		
 		activity_name = getIntent().getStringExtra("act");
 		TextView name = (TextView) findViewById(R.id.title);
 		name.setText(activity_name);
