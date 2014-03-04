@@ -101,7 +101,8 @@ public class EndActivity extends Activity {
 	public void rotate()
 	{
 		ImageView image = (ImageView) findViewById(R.id.imageView1);
-		Animation hyperspaceJump = AnimationUtils.loadAnimation(this, R.anim.sunspin);
-		image.startAnimation(hyperspaceJump);
+		Animation hyperspaceUp = AnimationUtils.loadAnimation(this, R.anim.sunspin);
+		hyperspaceUp.setRepeatCount(4);
+		image.startAnimation(hyperspaceUp);
 	}
 }

@@ -9,7 +9,8 @@ package com.example.rehab_coachv1;
 
 public final class R {
     public static final class anim {
-        public static final int sunspin=0x7f040000;
+        public static final int sunopen=0x7f040000;
+        public static final int sunspin=0x7f040001;
     }
     public static final class attr {
     }
@@ -27,35 +28,40 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int activity_divider=0x7f020018;
+        public static final int activity_divider=0x7f02001d;
         public static final int android_home=0x7f020000;
         public static final int android_home_invert=0x7f020001;
         public static final int blocko=0x7f020002;
         public static final int blocko_invert=0x7f020003;
         public static final int brain=0x7f020004;
         public static final int emer_contact_test=0x7f020005;
-        public static final int ic_action_help=0x7f020006;
-        public static final int ic_action_help_light=0x7f020007;
-        public static final int ic_action_overflow=0x7f020008;
-        public static final int ic_action_person=0x7f020009;
-        public static final int ic_action_person_light=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int map_example=0x7f02000c;
-        public static final int osumclogo=0x7f02000d;
-        public static final int osumclogo_invert=0x7f02000e;
-        public static final int profile_test=0x7f02000f;
-        public static final int rightarrow=0x7f020010;
-        public static final int ropeknot=0x7f020011;
-        public static final int slider_1=0x7f020012;
-        public static final int slider_2=0x7f020013;
-        public static final int slider_3=0x7f020014;
-        public static final int slider_4=0x7f020015;
-        public static final int slider_5=0x7f020016;
-        public static final int sunimage=0x7f020017;
+        public static final int feedbackslider_1=0x7f020006;
+        public static final int feedbackslider_2=0x7f020007;
+        public static final int feedbackslider_3=0x7f020008;
+        public static final int feedbackslider_4=0x7f020009;
+        public static final int feedbackslider_5=0x7f02000a;
+        public static final int ic_action_help=0x7f02000b;
+        public static final int ic_action_help_light=0x7f02000c;
+        public static final int ic_action_overflow=0x7f02000d;
+        public static final int ic_action_person=0x7f02000e;
+        public static final int ic_action_person_light=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int map_example=0x7f020011;
+        public static final int osumclogo=0x7f020012;
+        public static final int osumclogo_invert=0x7f020013;
+        public static final int profile_test=0x7f020014;
+        public static final int rightarrow=0x7f020015;
+        public static final int ropeknot=0x7f020016;
+        public static final int slider_1=0x7f020017;
+        public static final int slider_2=0x7f020018;
+        public static final int slider_3=0x7f020019;
+        public static final int slider_4=0x7f02001a;
+        public static final int slider_5=0x7f02001b;
+        public static final int sunimage=0x7f02001c;
     }
     public static final class id {
         public static final int bus=0x7f0a001a;
-        public static final int button1=0x7f0a0004;
+        public static final int button1=0x7f0a0002;
         public static final int buttons_line=0x7f0a000f;
         public static final int call_911=0x7f0a0007;
         public static final int change_contact_info=0x7f0a0016;
@@ -68,7 +74,7 @@ public final class R {
         public static final int filler=0x7f0a0011;
         public static final int help_screen=0x7f0a002f;
         public static final int home_screen=0x7f0a002d;
-        public static final int imageView1=0x7f0a0003;
+        public static final int imageView1=0x7f0a0004;
         public static final int line=0x7f0a000c;
         public static final int list=0x7f0a0009;
         public static final int login=0x7f0a0010;
@@ -97,7 +103,7 @@ public final class R {
         public static final int slider=0x7f0a0026;
         public static final int start_button=0x7f0a0023;
         public static final int taxi=0x7f0a001b;
-        public static final int textView1=0x7f0a0002;
+        public static final int textView1=0x7f0a0003;
         public static final int title=0x7f0a0001;
         public static final int transportation=0x7f0a0008;
         public static final int username=0x7f0a000d;
