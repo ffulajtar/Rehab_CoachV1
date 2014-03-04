@@ -21,19 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/review"
-        android:layout_above="@+id/slider"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:textSize="36sp" />
-    
-    <ImageView
-        android:id="@+id/slider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/rightarrow"
-        android:visibility="gone" />
     
     <ImageView
         android:id="@+id/page_1"
@@ -41,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:src="@drawable/slider_1"
         android:visibility="gone" />
     
@@ -62,7 +51,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:src="@drawable/slider_2"
         android:visibility="gone" />
     
@@ -83,7 +71,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:src="@drawable/slider_3"
         android:visibility="gone" 
         />
@@ -105,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:src="@drawable/slider_4"
         android:visibility="gone" />
     
@@ -126,7 +112,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:src="@drawable/slider_5"
         android:visibility="gone" />
     
@@ -139,24 +124,15 @@
         android:progress="0"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="140dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:onClick="endActivity" />
     
-        <TextView
+    <TextView
         android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/end_button"
+	    android:layout_above="@+id/seek_5"
         android:layout_centerHorizontal="true"
         android:textSize="36sp" />
-    
-    <Button
-	    android:id="@+id/end_button"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_centerHorizontal="true"
-	    android:layout_alignParentBottom="true"
-	    android:text="@string/end_activity"
-	    android:visibility="invisible"
-	    android:onClick="endActivity" />
 
 </RelativeLayout>

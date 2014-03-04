@@ -316,8 +316,6 @@ public class ReviewActivity extends FragmentActivity {
 					.findViewById(R.id.review_text);
 			dummyTextView.setText(getArguments().getString(
 					ARG_SECTION_NUMBER));
-			Button start = (Button) rootView.findViewById(R.id.end_button);
-			start.setVisibility(View.VISIBLE);
 			ImageView image = (ImageView) rootView.findViewById(R.id.page_5);
 			image.setVisibility(View.VISIBLE);
 			SeekBar seek_5 = (SeekBar) rootView.findViewById(R.id.seek_5);
