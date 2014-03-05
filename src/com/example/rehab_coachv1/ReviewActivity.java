@@ -3,6 +3,7 @@
 import java.util.ArrayList;
 import java.util.Locale;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -300,7 +301,8 @@ public class ReviewActivity extends FragmentActivity {
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
-
+		public TextView progress;
+		
 		public LastFragment() {
 		}
 
@@ -316,6 +318,7 @@ public class ReviewActivity extends FragmentActivity {
 					.findViewById(R.id.review_text);
 			dummyTextView.setText(getArguments().getString(
 					ARG_SECTION_NUMBER));
+			progress = (TextView) rootView.findViewById(R.id.progress);
 			ImageView image = (ImageView) rootView.findViewById(R.id.page_5);
 			image.setVisibility(View.VISIBLE);
 			SeekBar seek_5 = (SeekBar) rootView.findViewById(R.id.seek_5);
@@ -339,8 +342,7 @@ public class ReviewActivity extends FragmentActivity {
 
 		@Override
 		public void onStopTrackingTouch(SeekBar seekBar) {
-			// TODO Auto-generated method stub
-			
+				progress.setText(val5 + "/" + seekBar.getMax());			
 		}
 
 	}

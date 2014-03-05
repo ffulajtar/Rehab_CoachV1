@@ -16,12 +16,9 @@ import android.widget.ListView;
 
 public class HomeActivity extends Activity {
 
-    private String[] mPlanetTitles;
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-
 	ArrayList<String> activity_names_list = new ArrayList<String>();
 	ArrayList<Integer> activity_ids_list = new ArrayList<Integer>();
+	
 	
 	int theme = 0;
 	private SQLiteDatabase database;
@@ -60,17 +57,7 @@ public class HomeActivity extends Activity {
 		{
 			setTheme(android.R.style.Theme_Holo);
 		}
-		setContentView(R.layout.activity_home_drawer);
-        mPlanetTitles = getResources().getStringArray(R.array.planets_array);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // Set the adapter for the list view
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mPlanetTitles));
-        // Set the list's click listener
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
+		setContentView(R.layout.activity_home);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.home_list_layout, activity_names_list);
 		ListView listView = (ListView) findViewById(R.id.list);
 		listView.setAdapter(adapter);
@@ -80,7 +67,6 @@ public class HomeActivity extends Activity {
 			{
 				Intent remind = new Intent (HomeActivity.this, ReminderActivity.class);
 				remind.putExtra("act", activity_names_list.get(position));
-				
 				remind.putExtra("theme", theme);
 				//position starts at index 0.  We need to pass in the activity_id, which will be position+1 for now
 				//This will likely change when we have a prioritized activity list
