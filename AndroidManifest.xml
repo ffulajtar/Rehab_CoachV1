@@ -3,6 +3,10 @@
     package="com.example.rehab_coachv1"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -13,6 +17,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+    <meta-data
+		android:name="com.google.android.maps.v2.API_KEY"
+		android:value="AIzaSyCzhIKwW4rcIZ2Rq8Ed_pqXWcv_bjACqoI"/>
+        
         <activity
             android:name="com.example.rehab_coachv1.LoginActivity"
             android:label="@string/app_name" >
