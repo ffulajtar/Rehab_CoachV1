@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="disability_list">
+        <item>@string/disability1</item>
+        <item>@string/disability2</item>
+        <item>@string/disability3</item>
+        <item>@string/disability4</item>
+    </string-array>
+</resources>

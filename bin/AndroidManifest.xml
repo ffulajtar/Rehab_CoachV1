@@ -62,6 +62,14 @@
             android:name="com.example.rehab_coachv1.EmergencyContactActivity"
             android:label="@string/title_activity_emergency_contact" >
         </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.AdminActivity"
+            android:label="@string/title_activity_admin" >
+        </activity>
+        <activity
+            android:name="com.example.rehab_coachv1.CreateProfileActivity"
+            android:label="@string/title_activity_create_profile" >
+        </activity>
     </application>
 
 </manifest>

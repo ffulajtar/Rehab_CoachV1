@@ -42,7 +42,7 @@
         android:max="10"
         android:progress="0"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:visibility="gone" />
     
     <ImageView
@@ -62,7 +62,7 @@
         android:max="10"
         android:progress="0"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:visibility="gone"/>
     
     <ImageView
@@ -83,7 +83,7 @@
         android:max="10"
         android:progress="0"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:visibility="gone"/>
     
     <ImageView
@@ -103,7 +103,7 @@
         android:max="10"
         android:progress="0"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:visibility="gone" />
     
     <ImageView
@@ -113,7 +113,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/slider_5"
-        android:visibility="gone" />
+        android:visibility="gone" 
+        android:onClick="endActivity"/>
     
     <SeekBar
         android:id="@+id/seek_5"
@@ -123,7 +124,7 @@
         android:max="10"
         android:progress="0"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="100dp"
         android:visibility="gone"
         android:onClick="endActivity" />
     
@@ -131,7 +132,8 @@
         android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-	    android:layout_above="@+id/seek_5"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="130dp"
         android:layout_centerHorizontal="true"
         android:textSize="36sp" />
 

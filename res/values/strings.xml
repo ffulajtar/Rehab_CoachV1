@@ -58,5 +58,14 @@
     <string name="lost_title">You Are Here</string>
     <string name="profile_title">Profile</string>
     <string name="transportation_title">Do you need helping finding transportation?</string>
-
+    <string name="title_activity_admin">AdminActivity</string>
+    <string name="create_patient">Create New Profile</string>
+    <string name="impairments">Add/Remove Impairments</string>
+    <string name="activities">Add/Remove Activities</string>
+    <string name="title_activity_create_profile">CreateProfileActivity</string>
+	<string name="disability1">Spinal Cord Injury</string>
+    <string name="disability2">Deaf</string>
+    <string name="disability3">Blind</string>
+    <string name="disability4">Wheelchair</string>
+    
 </resources>

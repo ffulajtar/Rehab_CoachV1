@@ -38,9 +38,16 @@ public class LoginActivity extends Activity {
 	
 	public void loginToApp(View view)
 	{
-			Intent home = new Intent(this, HomeActivity.class);
-			home.putExtra("theme", theme);
-			startActivity(home);
+		Intent home = new Intent(this, HomeActivity.class);
+		home.putExtra("theme", theme);
+		startActivity(home);
+	}
+	
+	public void adminMode(View view)
+	{
+		Intent home = new Intent(this, AdminActivity.class);
+		home.putExtra("theme", theme);
+		startActivity(home);
 	}
 	
 	public void changetheme(View view)

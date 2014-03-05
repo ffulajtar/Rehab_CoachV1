@@ -81,12 +81,13 @@
         android:onClick="loginToApp" />
      
    	<Button
-        android:id="@+id/filler"
+        android:id="@+id/admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
 		android:layout_weight="1.0"
-		android:visibility="invisible" />
+		android:onClick="adminMode"
+		android:text="Admin"/>
    	
 	<Button
         android:id="@+id/changetheme"
